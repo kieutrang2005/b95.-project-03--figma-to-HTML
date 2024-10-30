@@ -1,0 +1,179 @@
+/* PC */
+@media (min-width: 992px) {
+  /* từ 992px trở lên thì áp dụng */
+  .mobile-header {
+    display: none;
+  }
+}
+
+/* tablet & mobile */
+@media (max-width: 991.98px) {
+  /* tối đa 991.98px thì áp dụng */
+  .container {
+    width: auto;
+  }
+  /* 1. ẩn navbar trên tablet & mobile */
+  .navbar {
+    display: none;
+  }
+
+  /* 2. chuyển logo vào giữa */
+  .header-top {
+    position: relative;
+  }
+  .header__logo {
+    position: absolute;
+    left: 50%;
+    translate: -50% -50%;
+  }
+  /* 3. căn lại vị trí của menu icon */
+  .menu-header__icon {
+    position: absolute;
+    top: 38px;
+    left: 26px;
+    color: #fff;
+    width: 24px;
+  }
+
+  /* 4. overlay */
+  .menu-overlay {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.3);
+    inset: 0;
+    z-index: 1;
+    /* bình thường ẩn overlay đi */
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+  }
+
+  /* 5. kiểm tra nếu checkbox đc check thì hiện overlay */
+  .menu-checkbox:checked ~ .menu-overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* 6. code cho menu drawer */
+  .menu-drawer {
+    position: fixed;
+    background: #2e1919;
+    inset: 0 60% 0 0;
+    z-index: 2;
+    transform: translateX(-100%);
+    transition: 0.5s;
+    padding: 60px;
+  }
+  /* 7. kiểm tra nếu checkbox được check thì hiện lại menu */
+  .menu-checkbox:checked ~ .menu-drawer {
+    transform: translateX(0);
+  }
+
+  /* 8. menu-top */
+  .close-menu {
+    width: 24px;
+    color: #fff;
+  }
+
+  .menu-drawer__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #navbar__list--mobile {
+    margin-top: 25px;
+  }
+  .navbar__link {
+    display: block;
+    font-size: 2rem;
+  }
+  .navbar__link:hover {
+    background: #746f6f;
+  }
+
+  /* khối hero */
+  .hero {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .hero__content {
+    order: 2;
+  }
+  .hero__media {
+    order: 1;
+  }
+  .hero__content {
+    width: 49%;
+    text-align: center;
+    margin: 22px auto;
+  }
+
+  .hero__row {
+    justify-content: center;
+  }
+
+  /* khối sevice */
+
+  .sevice-row {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .sevice__imgs {
+    width: 100%;
+  }
+
+  .sevice__list {
+    text-align: center;
+  }
+  .sevice-item {
+    width: 90%;
+    text-align: start;
+  }
+
+  /* work-list */
+  .work-list {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+
+  /* about */
+  .about-row {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  /* ẩn ảnh small */
+  .about__img--small {
+    display: none;
+  }
+  .about__media {
+    width: 100%;
+  }
+  .about__img--big {
+    width: 100%;
+    border-radius: 15px;
+    margin: 25px auto;
+  }
+  .about-content {
+    width: 90%;
+    text-align: center;
+  }
+}
+
+/* tablet */
+@media (min-width: 768px) and (max-width: 991.98) {
+}
+
+/* mobile */
+@media (min-width: 767.98px) {
+}
+
+/* tạm ẩn phần ko liên quan */
+
+.footer,
+.team,
+.blog,
+.appointment,
+.install {
+  display: none;
+}
