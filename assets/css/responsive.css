@@ -261,11 +261,11 @@
     display: none;
   }
   .hero__img-large {
-    width: 100%;
+    width: 246px;
     height: auto;
   }
   .hero__content {
-    width: 54%;
+    width: 70%;
   }
   .hero__heading {
     font-size: 3rem;
@@ -284,13 +284,16 @@
   }
   .sevice__desc {
     width: 99%;
+    font-size: 1.6rem;
   }
   .sevice__imgs {
-    width: 94%;
-    margin-left: 10px;
+    width: 87%;
+    height: auto;
+    margin-left: 23px;
   }
   .section-heading {
     text-align: center;
+    font-size: 4rem;
   }
 
   /* work */
@@ -301,7 +304,7 @@
   }
   .work-item {
     padding: 20px 42px;
-    width: 370px;
+    width: 342px;
     margin: 0 auto;
   }
 
@@ -313,6 +316,16 @@
   .about__desc {
     width: 100%;
     margin-top: 10px;
+  }
+  .about__img--big {
+    width: 91%;
+    border-radius: 15px;
+    margin-top: -112px;
+    margin-left: 15px;
+    margin-bottom: -55px;
+    object-fit: contain;
+    box-shadow: none;
+    background: none;
   }
 
   /* team */
@@ -349,6 +362,8 @@
     width: 100%;
   }
   .appointment__inner {
+    margin: 0 auto;
+    width: 89%;
     padding: 30px 5px;
   }
   .appointment__heading {
@@ -372,7 +387,7 @@
     padding-left: 28px;
   }
   .footer__desc {
-    width: 346px;
+    width: 312px;
     font-size: 1.5rem;
   }
   .footer__copyright {
