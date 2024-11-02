@@ -208,6 +208,7 @@
             </svg>
            </label>
         </div>
+
         <!-- nav mobile -->
          <ul id="navbar__list--mobile"></ul>
          <!-- sử dụng js để coppy navbar -->
@@ -217,6 +218,18 @@
             // sao chép
             navmobile.innerHTML = navPC.innerHTML;
           </script>
+
+          <!-- sparate ngăn cách -->
+           <div class="sparate"></div>
+           <!-- cta-action -->
+           <div class="show-on-mobile">
+             <li class="navbar__item">
+              <a href="#!" class="navbar__link">Log In</a>
+            </li>
+            <li class="navbar__item">
+              <a href="#!" class="navbar__link">Sign up</a>
+            </li>
+           </div>
       </div>
      </div>
 
@@ -596,7 +609,7 @@
         <!-- top footer -->
         <div class="footer__top">
           <!-- column 1 -->
-          <div class="footer__column">
+          <div class="footer__column footer__hidden-tablet">
 
             <!-- logo -->
           <a href="./"><img src="./assets/img/logo (1).svg" alt="" class="logo"/></a>
@@ -678,7 +691,10 @@
             </form>
           </div>
         </div>
-        <!--  -->
+        <!-- Copyright -->
+         <div class="footer__copyright">
+          <p class="end">2021 GDN. Copyright and All rights reserved.</p>
+         </div>
       </div>
      </footer>
 

@@ -8,7 +8,7 @@
 
 /* tablet & mobile */
 @media (max-width: 991.98px) {
-  /* tối đa 991.98px thì áp dụng */
+  /* từ 991.98px trở xuống thì áp dụng */
   .container {
     width: auto;
   }
@@ -16,7 +16,7 @@
   .navbar {
     display: none;
   }
-
+  /* ==================================================== */
   /* 2. chuyển logo vào giữa */
   .header-top {
     position: relative;
@@ -57,7 +57,7 @@
   .menu-drawer {
     position: fixed;
     background: #2e1919;
-    inset: 0 60% 0 0;
+    inset: 0 40% 0 0;
     z-index: 2;
     transform: translateX(-100%);
     transition: 0.5s;
@@ -91,6 +91,7 @@
     background: #746f6f;
   }
 
+  /* ======================================================== */
   /* khối hero */
   .hero {
     flex-direction: column;
@@ -113,6 +114,7 @@
     justify-content: center;
   }
 
+  /* ========================================================== */
   /* khối sevice */
 
   .sevice-row {
@@ -131,24 +133,27 @@
     text-align: start;
   }
 
+  /* ========================================================== */
   /* work-list */
   .work-list {
     grid-template-columns: 1fr;
     row-gap: 30px;
   }
 
+  /* ============================================================= */
   /* about */
   .about-row {
     flex-direction: column;
     row-gap: 30px;
   }
+  .about__media {
+    width: 100%;
+  }
   /* ẩn ảnh small */
   .about__img--small {
     display: none;
   }
-  .about__media {
-    width: 100%;
-  }
+
   .about__img--big {
     width: 100%;
     border-radius: 15px;
@@ -158,22 +163,219 @@
     width: 90%;
     text-align: center;
   }
+  .about__heading {
+    margin: 0 auto;
+  }
+  .about__desc {
+    margin: 0 auto;
+  }
+
+  /* =========================================================== */
+  /* team list */
+  .team-list {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 30px;
+  }
+  .team-item__img .thumb {
+    margin: 0 auto;
+  }
+
+  /* ============================================================= */
+  /* install */
+  .install__img {
+    display: none;
+  }
+  .install__content {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  /* =============================================================== */
+  /* blog */
+  .blog__inner {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  .blog__list {
+    order: 1;
+  }
+  .blog__content {
+    order: 2;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .blog__heading {
+    text-align: center;
+    max-width: 90%;
+  }
+  .blog__control {
+    left: 0;
+  }
+
+  .appointment__btn {
+    left: 179px;
+  }
 }
 
 /* tablet */
-@media (min-width: 768px) and (max-width: 991.98) {
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* footer */
+  .footer__hidden-tablet {
+    display: none;
+  }
+  .footer__top {
+    grid-template-columns: 0.5fr 0.5fr 1fr;
+  }
+
+  .show-on-mobile {
+    display: none;
+  }
 }
 
-/* mobile */
-@media (min-width: 767.98px) {
-}
+/* ----------------------------------mobile------------------------------------------- */
+@media (max-width: 767.98px) {
+  .action {
+    display: none;
+  }
+  .menu-header__icon {
+    top: 18px;
+  }
+  .menu-drawer {
+    padding: 40px;
+    inset: 0 20% 0 0;
+  }
+  .navbar__item {
+    list-style-type: none;
+  }
 
-/* tạm ẩn phần ko liên quan */
+  /* thêm vạch kẻ ngang */
+  .sparate {
+    border: 1.5px solid gray;
+    margin-top: 10px;
+  }
 
-.footer,
-.team,
-.blog,
-.appointment,
-.install {
-  display: none;
+  /* hero */
+  .hero__img-small {
+    display: none;
+  }
+  .hero__img-large {
+    width: 100%;
+    height: auto;
+  }
+  .hero__content {
+    width: 54%;
+  }
+  .hero__heading {
+    font-size: 3rem;
+  }
+  .hero__desc {
+    font-size: 1.3rem;
+  }
+  .hero__row {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  /* sevice */
+  .sevice {
+    padding: 70px 0;
+  }
+  .sevice__desc {
+    width: 99%;
+  }
+  .sevice__imgs {
+    width: 94%;
+    margin-left: 10px;
+  }
+  .section-heading {
+    text-align: center;
+  }
+
+  /* work */
+  .work__desc {
+    width: 95%;
+    text-align: center;
+    margin-left: 11px;
+  }
+  .work-item {
+    padding: 20px 42px;
+    width: 370px;
+    margin: 0 auto;
+  }
+
+  /* about */
+  .about__heading {
+    width: 100%;
+    font-size: 4rem;
+  }
+  .about__desc {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  /* team */
+  .team {
+    padding-bottom: 22px;
+  }
+  .team-list {
+    grid-template-columns: repeat(1, 1fr);
+    width: 89%;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+
+  /* install */
+  .install__content {
+    min-width: 326px;
+    margin-left: -45px;
+  }
+  .install__heading {
+    font-size: 3rem;
+    text-align: left;
+  }
+  /* blog */
+  .blog__list {
+    flex-direction: column;
+  }
+  .blog__heading {
+    font-size: 4rem;
+  }
+
+  /* appoiment */
+  .appointment {
+    margin-top: 94px;
+    width: 100%;
+  }
+  .appointment__inner {
+    padding: 30px 5px;
+  }
+  .appointment__heading {
+    font-size: 3rem;
+  }
+  .appointment__desc {
+    width: auto;
+    font-size: 1.8rem;
+  }
+  .appointment__btn {
+    left: 83px;
+  }
+
+  /* footer */
+  .footer {
+    margin-top: 88px;
+    padding-bottom: 28px;
+  }
+  .footer__top {
+    grid-template-columns: repeat(1, 1fr);
+    padding-left: 28px;
+  }
+  .footer__desc {
+    width: 346px;
+    font-size: 1.5rem;
+  }
+  .footer__copyright {
+    margin-top: 28px;
+  }
 }
